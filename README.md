@@ -16,14 +16,14 @@
 
 The image is for running security-checker, security-checker is installed in /app/ in case you need to customize the install before usage. The image is based on php:7.2-alpine3.8
 
-## Security-checkers
+## Examples
 
 ```yaml
 php-security-checker:
   stage: linting
   image: pipelinecomponents/php-security-checker:latest
   script:
-    - security-checker .
+    - cd ${COMPOSER_LOCATION:-.} && security-checker security:check composer.lock
 ```
 
 ## Versioning
