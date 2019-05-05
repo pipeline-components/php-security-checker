@@ -1,4 +1,5 @@
 {
+    "type": "application",
     "require": {
         "sensiolabs/security-checker": "^5.0"
     }
