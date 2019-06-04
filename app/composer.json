@@ -1,6 +1,6 @@
 {
     "type": "application",
     "require": {
-        "sensiolabs/security-checker": "5.0.3"
+        "sensiolabs/security-checker": "6.0.0"
     }
 }
