@@ -1,0 +1,28 @@
+---
+name: "php-security-checker"
+description: "php security-checker by Pipeline Components"
+author: "Robbert Müller <spam.me@grols.ch>"
+branding:
+  icon: "flag"
+  color: "green"
+inputs:
+  file:
+    description: "Composer file to check"
+    required: false
+    default: "composer.lock"
+  options:
+    description: "Additional options"
+    required: false
+    default: ""
+  command:
+    description: "Action"
+    required: false
+    default: "security:check"
+runs:
+  using: "docker"
+  image: docker://pipelinecomponents/php-security-checker
+  args:
+    - security-checker
+    - "${{ inputs.command }}"
+    - "${{ inputs.options }}"
+    - "${{ inputs.file }}"
