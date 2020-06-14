@@ -1,5 +1,5 @@
 ---
-name: "php-security-checker"
+name: "pipeline-components-php-security-checker"
 description: "php security-checker by Pipeline Components"
 author: "Robbert Müller <spam.me@grols.ch>"
 branding:
