@@ -1,6 +1,6 @@
 {
     "type": "application",
     "require": {
-        "enlightn/security-checker": "1.5.0"
+        "enlightn/security-checker": "1.6.1"
     }
 }
