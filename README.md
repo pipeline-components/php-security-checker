@@ -21,7 +21,7 @@ The image is for running security-checker, security-checker is installed in /app
 ```yaml
 php-security-checker:
   stage: linting
-  image: pipelinecomponents/php-security-checker:latest
+  image: registry.gitlab.com/pipeline-components/php-security-checker:latest
   script:
     - cd ${COMPOSER_LOCATION:-.} && security-checker security:check composer.lock
 ```
