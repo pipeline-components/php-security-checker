@@ -14,8 +14,9 @@ ENV DEFAULTCMD security-checker
 ENV PATH "$PATH:/app/vendor/bin/"
 COPY --from=build /app/ /app/
 
-RUN apk add --no-cache 	libzip=1.5.2-r0 \
-    && apk add --virtual build-dependencies --no-cache build-base=0.5-r1 autoconf=2.69-r2 libzip-dev=1.5.2-r0 \
+# hadolint ignore=DL3018
+RUN apk add --no-cache 	libzip unzip \
+    && apk add --virtual build-dependencies --no-cache build-base autoconf libzip-dev \
     && docker-php-source extract \
     && docker-php-ext-install zip \
     && docker-php-source delete \
