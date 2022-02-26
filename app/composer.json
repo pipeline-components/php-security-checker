@@ -1,7 +1,7 @@
 {
     "type": "application",
     "require": {
-        "enlightn/security-checker": "1.9.0"
+        "enlightn/security-checker": "1.10.0"
     },
     "license": "MIT",
     "description": "Pipeline Components Php-security-checker",
